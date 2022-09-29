@@ -1,0 +1,22 @@
+{% extends 'user/index.html' %}
+{{products}}
+{% load static %}
+{% block content %}
+ <center>
+        <table align="center" width="700px" border-collapse=collapse border="1px">
+            <thead align="center">
+                <td>물품</td>
+                <td>가격</td>
+                <td>정보</td>
+            </thead>
+            <tbody class>
+                <tr>
+                    <td align="center">{{product.name}}</td>
+                    <td align="center">{{product.price}}</td>
+                    <td>{{product.body}}<br><br><br> <a href ="{% url 'user:pay' product.id %}"><img src= "{%static 'img/buy.png' %}"width="200" height="70" align="right"><p>{{user.title}}</p></a><br></td>
+                </tr>
+            </tbody>
+        </table>
+     <br><a href='/mall'>목록으로 이동</a>
+    </center>
+{% endblock %}

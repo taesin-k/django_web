@@ -1,0 +1,20 @@
+{% extends 'user/index.html' %}
+{{users}}
+{% load static %}
+{% block content %}
+<center>
+
+        <table width ="500" height="300" align = "center" border="1">
+            <thead>
+                <td><center>{{user.title}}</center></td>
+                <td>{{user.pub_date}}</td>
+            </thead>
+            <tbody class>
+                <tr>
+                    <td colspan="3">{{user.body}}<br><br><br><center></center></td>
+                </tr>
+            </tbody>
+        </table>
+    <br><br><a href='/board'>목록으로 이동</a>
+</center>
+{% endblock %}

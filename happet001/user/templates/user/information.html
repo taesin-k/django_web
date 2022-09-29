@@ -1,0 +1,25 @@
+{% extends 'user/index.html' %}
+{{users}}
+{% load static %}
+{% block content %}
+
+    <center>
+        <table align="center" width="700px" border-collapse=collapse border-bottom="1px">
+            <thead align="center">
+                <td>No.</td>
+                <td>제목</td>
+                <td>등록 날짜</td>
+            </thead>
+            <tbody class>
+                {% for user in users.all %}
+                <tr>
+                    <td align="center">{{user.id}}</td>
+                    <td><a href ="{% url 'user:detail' user.id %}"><p>{{user.title}}</p></a></td>
+                    <td align="center">{{ user.pub_date | date:'Y-m-d'}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+{% endblock %}
+

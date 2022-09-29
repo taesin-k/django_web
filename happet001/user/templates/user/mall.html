@@ -1,0 +1,12 @@
+{% extends 'user/index.html' %}
+{{products}}
+{% load static %}
+{% block content %}
+    <a href ="{% url 'user:product_detail' 1 %}"><img src= "{%static 'img/food1.jpg' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 2 %}"><img src= "{%static 'img/food2.png' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 3 %}"><img src= "{%static 'img/food3.jpg' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 4 %}"><img src= "{%static 'img/toy1.jpg' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 5 %}"><img src= "{%static 'img/toy2.jpg' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 6 %}"><img src= "{%static 'img/snack1.jpg' %}"width="300" height="300"></a>
+    <a href ="{% url 'user:product_detail' 7 %}"><img src= "{%static 'img/snack2.jpg' %}"width="300" height="300"></a>
+{% endblock %}

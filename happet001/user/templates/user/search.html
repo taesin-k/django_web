@@ -1,0 +1,55 @@
+{% extends 'user/index.html' %}
+{% load static %}
+{% block content %}
+
+<script>
+
+    function show_layer(div_name){
+
+        document.all.div_01.style.display="none";
+        document.all.div_02.style.display="none";
+        document.all.div_03.style.display="none";
+        document.all.div_04.style.display="none"; // 메뉴 숫자에 따라 늘려주세요
+
+        switch(div_name){
+        case '1':
+            document.all.div_01.style.display="";
+            break;
+        case '2':
+            document.all.div_02.style.display="";
+            break;
+        case '3':
+            document.all.div_03.style.display="";
+            break;
+        case '4':
+            document.all.div_04.style.display="";
+            break;
+        }
+}
+
+</script>
+</script>
+<center>
+        <a href="javascript:show_layer('1');">천안 살펴보기</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="javascript:show_layer('2');">서울 살펴보기</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="javascript:show_layer('3');">부산 살펴보기</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="javascript:show_layer('4');">제주 살펴보기</a>&nbsp;
+    <DIV id=div_01>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d102275.93258465079!2d126.85091625460595!3d36.76761918957646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z64-Z66y867OR7JuQ!5e0!3m2!1sko!2skr!4v1623855599256!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <h1>천안</h1>
+    </DIV>
+    <DIV id=div_02>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d170246.78748405405!2d126.94326426069989!3d37.5452369880616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z7ISc7Jq4IOuPmeusvOuzkeybkA!5e0!3m2!1sko!2skr!4v1624013782092!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <h1>서울</h1>
+    </DIV>
+    <DIV id=div_03>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52195.092592616566!2d129.04865508728602!3d35.15179998152062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z67aA7IKwIOuPmeusvOuzkeybkA!5e0!3m2!1sko!2skr!4v1624013960114!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <h1>부산</h1>
+    </DIV>
+    <DIV id=div_04>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d213215.34000333413!2d126.38214398116874!3d33.384386508927655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z7KCc7KO864-EIOuPmeusvOuzkeybkA!5e0!3m2!1sko!2skr!4v1624014001202!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <h1>제주도</h1>
+    </DIV>
+
+</center>
+{% endblock %}

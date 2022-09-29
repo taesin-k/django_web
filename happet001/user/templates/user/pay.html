@@ -1,0 +1,26 @@
+{% extends 'user/index.html' %}
+{{products}}
+{% load static %}
+{% block content %}
+ <center>
+        <table align="center" width="700px" border-collapse=collapse border="1px">
+            <thead align="center">
+                <td>물품</td>
+                <td>가격</td>
+                <td>구매방법</td>
+            </thead>
+            <tbody class>
+                <tr>
+                    <td align="center">{{product.name}}</td>
+                    <td align="center">{{product.price}}</td>
+                    <td><br><input type="radio" name="chk_info" value="카드 결제"checked="checked">카드 결제<br>
+                            <input type="radio" name="chk_info" value="무통장 입금">무통장 입금<br>
+                            <input type="radio" name="chk_info" value="계좌 이체">계좌 이체<br><br><br>
+                            <a href='/mall'><img src= "{%static 'img/pay.png' %}"width="200" height="70" align="right" onclick="alert('결제가 완료되었습니다!');" style="cursor:pointer;"></a></td>
+                </tr>
+            </tbody>
+        </table>
+     <br><a href='/mall'>목록으로 이동</a>
+    </center>
+
+{% endblock %}

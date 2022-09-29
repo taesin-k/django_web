@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{{products}}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAPPET</title>
+    <center>
+    <span style="font-weight: bold; font-size: 2.5em; color:gray;"><a href='/'><img src= "{%static 'img/title.gif' %}" width="300" height="200"></a></span>
+    <div class="imgCollage">
+        <a href='/mall'><img src= "{%static 'img/햅펫몰.png' %}"></a>
+        <a href='/board'><img src= "{%static 'img/건강관리.png' %}"></a>
+        <a href='/search'><img src= "{%static 'img/병원찾기.png' %}"></a></div>
+    </center>
+</head>
+<body  background = "{%static 'img/top.jpg' %}">
+{% block content%}
+<center>
+    <img src= "{%static 'img/best.png' %}" width="300" height="200"><br>
+    <a href ="{% url 'user:product_detail' 2 %}"><img src= "{%static 'img/food2.png' %}"width="400" height="400"></a>
+    <a href ="{% url 'user:product_detail' 4 %}"><img src= "{%static 'img/toy1.jpg' %}"width="400" height="400"></a>
+    <a href ="{% url 'user:product_detail' 6 %}"><img src= "{%static 'img/snack1.jpg' %}"width="400" height="400"></a><br><br>
+    <img src= "{%static 'img/new.png' %}" width="300" height="200"><br>
+    <a href ="{% url 'user:product_detail' 1 %}"><img src= "{%static 'img/food1.jpg' %}"width="400" height="400"></a>
+    <a href ="{% url 'user:product_detail' 3 %}"><img src= "{%static 'img/food3.jpg' %}"width="400" height="400"></a>
+    <a href ="{% url 'user:product_detail' 5 %}"><img src= "{%static 'img/toy2.jpg' %}"width="400" height="400"></a>
+</center>
+{% endblock %}
+</body>
+<footer>
+    <center>
+        <br><br><br><img src= "{%static 'img/bottom1.jpg' %}" width="1800" height="300">
+    </center>
+</footer>
+
+</html>
